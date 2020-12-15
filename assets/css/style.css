@@ -265,6 +265,10 @@ h5 {
   margin-top: 40px;
 }
 
+.webp .titleContainer {
+  background-image: url("../images/titleBackground.webp") !important;
+}
+
 .titleContainer {
   display: flex;
   flex-direction: column;

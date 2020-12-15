@@ -3,21 +3,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         {{- if .IsHome }}
-            {{ .Site.Title }}
+        {{ .Site.Title }}
         {{- else }}
-            {{ .Title }} &middot; {{ .Site.Title }}
+        {{ .Title }} &middot; {{ .Site.Title }}
         {{- end }}
     </title>
     {{ $style := resources.Get "css/style.css" }}
     {{ $style = $style | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/icofont/fonts/icofont.woff2">
     {{ $style := resources.Get "fonts/icofont/icofont.css" }}
     {{ $style = $style | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Montserrat&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Montserrat&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     {{ $js := resources.Get "script.js" | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
     <script src="{{ $js.RelPermalink }}"></script>
 </head>
