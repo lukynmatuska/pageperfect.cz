@@ -1,0 +1,6 @@
+baseURL = "/"
+languageCode = "cs-cz"
+defaultContentLanguage = "cs-cz"
+title = "Page perfect"
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
