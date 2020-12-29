@@ -11,3 +11,14 @@ fields:
 - type: datetime
   name: publishDate
   label: publishDate
+- name: oblibenost
+  type: number
+  label: Oblíbenost
+  description: ''
+  default: 5
+  required: true
+  config:
+    min: 0
+    max: 10
+    step: 0.5
+    required: true
